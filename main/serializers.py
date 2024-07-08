@@ -1,11 +1,25 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Client, House
+from .models import*
 
 
 class ClientSerializer(ModelSerializer):
     class Meta:
         model = Client
         fields  = '__all__'
+
+
+
+class CategorySerialzier(ModelSerializer):
+    class Meta:
+        model = Category    
+        fields = '__all__'
+
+
+class SubcategorySerializer(ModelSerializer):
+    class Meta:
+        model = Subcategory
+        fields = '__all__'
+
 
 
 
@@ -20,5 +34,3 @@ class HouseDetailSerializer(ModelSerializer):
         model = House 
         fields = '__all__'
 
-
-        
