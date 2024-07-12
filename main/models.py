@@ -37,6 +37,7 @@ class House(models.Model):
     discount = models.PositiveBigIntegerField(default=0,blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     subcategory = models.ForeignKey(Subcategory, on_delete=models.CASCADE)
+    category=models.ForeignKey(Category, on_delete=models.CASCADE,blank=True, null=True )
     price = models.PositiveBigIntegerField(default=0,blank=True, null=True)
 
 
